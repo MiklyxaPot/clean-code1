@@ -5,28 +5,28 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.header__img img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.header__img .header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .aaa {
+  .header__img {
     text-align: center;
   }
 }
 
-.centered-main-page-element {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -38,7 +38,7 @@ body {
   flex-grow: 1
 }
 
-.task-row-wrapper {
+.todo__edit {
   display: flex;
 }
 
@@ -140,13 +140,13 @@ li>input[type="text"] {
   width: 226px
 }
 
-button.delete img {
+button.todo__delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+button.todo__delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -160,11 +160,11 @@ ul li input[type= "text"] {
   display: none
 }
 
-ul li.editMode input[type= "text"] {
+ul li.todo__item-mode input[type= "text"] {
   display: inline-block;
   width: 224px
 }
 
-ul li.editMode label {
+ul li.todo__item-mode label {
   display: none;
 }
