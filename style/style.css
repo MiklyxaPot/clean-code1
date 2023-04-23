@@ -135,13 +135,13 @@ button {
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
-  display: inline-block;
   flex-grow: 1;
 }
 
-/* li>input[type="text"] {
-  width: 226px
-}  */
+ .input-show {
+  width: 226px;
+  display: inline-block;
+}  
 
 .todo__img {
   height: 2em;

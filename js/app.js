@@ -86,8 +86,9 @@ var editTask = function () {
 
   var listItem = this.parentNode;
 
-  var editInput = listItem.querySelector('.input-text');
+  var editInput = listItem.querySelector('.input__text');
   var label = listItem.querySelector("label");
+  var labelNone = listItem.querySelector(".todo__label");
   var editBtn = listItem.querySelector(".edit");
   var containsClass = listItem.classList.contains("todo__item-mode");
   //If class of the parent is .editmode
@@ -104,6 +105,8 @@ var editTask = function () {
 
   //toggle .editmode on the parent.
   listItem.classList.toggle("todo__item-mode");
+  labelNone.classList.toggle("item-mode__label");
+  editInput.classList.toggle("item-mode__input");
 };
 
 
@@ -127,7 +130,8 @@ var taskCompleted = function () {
   var listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
-
+  const completedInput = listItem.querySelector(".todo__label");
+  completedInput.classList.add("todo__label-completed");
 }
 
 
@@ -139,6 +143,8 @@ var taskIncomplete = function () {
   var listItem = this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
+  const completedInput = listItem.querySelector(".todo__label");
+  completedInput.classList.remove("todo__label-completed");
 }
 
 
