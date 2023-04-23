@@ -56,6 +56,7 @@ button {
 
 .todo__add {
   display: flex;
+  padding: 20px 0 0 0;
 }
 
 .todo__list{
